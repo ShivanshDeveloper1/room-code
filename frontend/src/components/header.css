@@ -1,0 +1,21 @@
+/* ---------------------------------------------
+# Header
+------------------------------------------------ */
+
+.header {
+    transition: all0.5s;
+    z-index: 997;
+    height: 80px;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    background-color: #fff;
+    padding-left: 20px;
+}
+
+/* Search Bar */
+/* Toggle Sidebar button */
+.header .toggle-sidebar-btn {
+    font-size: 42px;
+    padding-left: 10px;
+    cursor: pointer;
+    color: #012970;
+}

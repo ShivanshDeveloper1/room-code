@@ -1,0 +1,133 @@
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    5% {
+        transform: rotate(-45deg);
+    }
+
+    12% {
+        transform: rotate(-405deg);
+    }
+
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes icon-line-tip {
+    0% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    54% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    70% {
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+
+    84% {
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+
+    100% {
+        width: 25px;
+        left: 14px;
+        top: 45px;
+    }
+}
+
+@keyframes icon-line-long {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+
+    65% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+
+    84% {
+        width: 55px;
+        right: 0px;
+        top: 35px;
+    }
+
+    100% {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+    }
+}
+
+.blinking-circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(228, 7, 77);
+    border-radius: 50%;
+    animation: blink 1s infinite alternate;
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*  */
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #880e4f;
+}
+
+.summarry {
+    padding: 7px 0;
+
+    h2 {
+        font-family: Poppins, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: #4A2A7D;
+
+        span {
+            color: #4A2A7D !important;
+            font-family: Poppins, sans-serif;
+            font-weight: 500;
+            margin-right: 7px;
+        }
+
+        &:hover {
+            color: #4A2A7D !important;
+            font-weight: bold;
+        }
+    }
+}
+
+.description {
+    color: #4A2A7D !important;
+}

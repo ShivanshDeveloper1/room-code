@@ -1,0 +1,48 @@
+.card-custom {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.card-custom:hover {
+    border: 2px solid #ff5722;
+}
+
+.card-custom .card-img-top {
+    background-color: #ff5722;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+}
+
+.card-custom:hover .btn-custom {
+    background-color: transparent;
+    color: #ff5722;
+    border: 2px solid #ff5722;
+}

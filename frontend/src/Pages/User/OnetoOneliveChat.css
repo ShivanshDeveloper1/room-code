@@ -1,0 +1,201 @@
+/* Additional styles for OnetoOne Live Chat */
+
+.chat-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.error-content {
+    text-align: center;
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.error-content h3 {
+    color: #dc3545;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.error-content p {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.retry-button, .back-button-error {
+    padding: 10px 20px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.retry-button {
+    background: #075e54;
+    color: white;
+}
+
+.retry-button:hover {
+    background: #064e45;
+}
+
+.back-button-error {
+    background: #6c757d;
+    color: white;
+}
+
+.back-button-error:hover {
+    background: #5a6268;
+}
+
+/* Message bubbles styling */
+.message-item.sent .message-bubble {
+    background: #dcf8c6 !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.message-item.received .message-bubble {
+    background: #ffffff !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.message-item.sent .message-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid #dcf8c6;
+    border-bottom: 8px solid transparent;
+}
+
+.message-item.received .message-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid #ffffff;
+    border-bottom: 8px solid transparent;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Input focus styles */
+.input-wrapper input:focus {
+    outline: none;
+}
+
+.input-wrapper:focus-within {
+    box-shadow: 0 0 0 2px rgba(7, 94, 84, 0.2);
+}
+
+/* Emoji picker responsive */
+@media (max-width: 768px) {
+    .emoji-picker-container {
+        left: 8px !important;
+        right: 8px !important;
+        bottom: 60px !important;
+    }
+    
+    .emoji-picker-wrapper {
+        height: 250px;
+    }
+}
+
+/* Online status animation */
+.status-dot.online {
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Message time styling */
+.message-time {
+    clear: both;
+    display: block;
+    margin-top: 4px !important;
+    float: none !important;
+    text-align: right;
+}
+
+/* Scrollbar styling */
+.messages-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+/* Header avatar positioning */
+.onetoone-header .user-avatar-container {
+    margin-right: 12px;
+    margin-left: 8px;
+}
+
+/* Message list spacing */
+.messages-list {
+    padding-bottom: 20px;
+}
+
+/* Input container positioning */
+.message-input-container {
+    position: relative;
+    background: #f0f2f5 !important;
+    border-top: 1px solid #e9ecef !important;
+}
+
+/* Emoji picker positioning fix */
+.emoji-picker-container {
+    position: absolute !important;
+    bottom: 100% !important;
+    left: 16px !important;
+    right: 16px !important;
+    z-index: 1000 !important;
+    margin-bottom: 8px;
+}
+
+.emoji-picker-wrapper {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}

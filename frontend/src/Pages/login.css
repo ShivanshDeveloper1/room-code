@@ -1,0 +1,342 @@
+/* ==========================================================
+   Login / Register Page Styles
+   Color scheme: Indigo/Violet primary, soft neutral background
+   ========================================================== */
+
+:root {
+  --primary: #5b4de6;
+  --primary-dark: #4636c9;
+  --primary-light: #eef0ff;
+  --text-dark: #1f2233;
+  --text-muted: #6b6f8a;
+  --border-color: #e2e2f0;
+  --bg-gradient-start: #eef1ff;
+  --bg-gradient-end: #f7f8fc;
+  --error: #e5484d;
+  --white: #ffffff;
+  --shadow-soft: 0 10px 30px rgba(91, 77, 230, 0.12);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 48px;
+  background: linear-gradient(160deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+}
+
+/* ---------- Header ---------- */
+.header-section {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.header-section .logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-section .robot {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(91, 77, 230, 0.25));
+}
+
+/* ---------- Welcome ---------- */
+.welcome-section {
+  text-align: center;
+  margin: 20px 0 28px;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+/* ---------- Auth Card ---------- */
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 32px 28px;
+  border: 1px solid var(--border-color);
+}
+
+/* Tabs */
+.auth-tabs {
+  display: flex;
+  background: var(--primary-light);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.auth-tab.active {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(91, 77, 230, 0.35);
+}
+
+.auth-tab:not(.active):hover {
+  color: var(--primary);
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #fbfbfe;
+  color: var(--text-dark);
+}
+
+.form-input::placeholder {
+  color: #a7a9c0;
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(91, 77, 230, 0.12);
+}
+
+.password-group {
+  display: flex;
+  align-items: center;
+}
+
+.password-group .form-input {
+  padding-right: 44px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: var(--primary);
+}
+
+/* Submit button */
+.auth-btn {
+  margin-top: 6px;
+  padding: 13px 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+  box-shadow: 0 6px 16px rgba(91, 77, 230, 0.3);
+}
+
+.auth-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(91, 77, 230, 0.38);
+}
+
+.auth-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---------- Social section (kept for future use) ---------- */
+.social-section {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.social-text {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  color: var(--icon-color, var(--primary));
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Bottom images ---------- */
+.bottom-images-section {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 44px;
+  flex-wrap: wrap;
+}
+
+.bottom-image {
+  flex: 1 1 320px;
+  max-width: 420px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bottom-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(91, 77, 230, 0.2);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 1.6rem;
+  }
+
+  .auth-container {
+    padding: 26px 20px;
+  }
+
+  .header-section .robot {
+    height: 44px;
+  }
+
+  .header-section .logo {
+    height: 38px;
+  }
+
+  .bottom-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 24px 12px 36px;
+  }
+
+  .welcome-title {
+    font-size: 1.35rem;
+  }
+
+  .auth-container {
+    padding: 22px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .auth-tab {
+    font-size: 0.85rem;
+    padding: 9px 0;
+  }
+
+  .form-input {
+    padding: 11px 14px;
+    font-size: 0.9rem;
+  }
+
+  .auth-btn {
+    padding: 11px 0;
+    font-size: 0.95rem;
+  }
+
+  .bottom-images-section {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .bottom-image {
+    height: 190px;
+    max-width: 100%;
+  }
+}

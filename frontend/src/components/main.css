@@ -1,0 +1,89 @@
+/* -------------------------------------------
+# Main
+---------------------------------------------- */
+
+#main{
+    margin-top: 80px;
+    padding: 20px 18px;
+    transition: all 0.3s;
+}
+
+@media (max-width:1199px) {
+    #main {
+        padding: 20px;
+    }
+}
+
+
+/* App Layout Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 60px; /* Space for footer */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.footer-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+  flex: 1;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.footer-label {
+  font-size: 12px;
+}
+
+/* Active link style */
+.footer-btn.active {
+  color: #4CAF50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 350px) {
+  .footer-label {
+    font-size: 10px;
+  }
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
